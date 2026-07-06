@@ -271,11 +271,15 @@
   }
   .form-box button:hover{background:var(--verde-escuro)}
   .realizacao{
-    display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline;margin-top:60px;
-    border-top:1px solid var(--areia-escura);padding-top:28px;
+    margin-top:60px;border-top:1px solid var(--areia-escura);padding-top:34px;
   }
-  .realizacao .rot{font-size:.75rem;text-transform:uppercase;letter-spacing:.2em;font-weight:600;color:var(--terra)}
-  .realizacao .orgs{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--verde-escuro)}
+  .realizacao .rot{
+    display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.2em;
+    font-weight:600;color:var(--terra);margin-bottom:26px;
+  }
+  .realizacao-logos{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+  .realizacao-logos .logo-item{text-align:center}
+  .realizacao-logos p{margin-top:14px;font-size:.9rem;font-family:'Fraunces',serif;color:var(--verde-escuro)}
 
   /* FOOTER */
   footer{
@@ -591,7 +595,16 @@
     </div>
     <div class="realizacao">
       <span class="rot">Realização</span>
-      <span class="orgs">Biomas Brasil · Instituto Somos Água</span>
+      <div class="realizacao-logos">
+        <div class="logo-item">
+          <div class="logo-circle"><span>BB</span><img src="img/logos/biomas-brasil.png" alt="Biomas Brasil" style="background:#02253a" onerror="this.remove()"></div>
+          <p>Biomas Brasil</p>
+        </div>
+        <div class="logo-item">
+          <div class="logo-circle"><span>SA</span><img src="img/logos/instituto-somos-agua.png" alt="Instituto Somos Água" style="background:#02253a" onerror="this.remove()"></div>
+          <p>Instituto Somos Água</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
