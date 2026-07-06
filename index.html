@@ -207,6 +207,44 @@
   .btn:hover{background:var(--verde-escuro);transform:translateY(-2px)}
   .btn-note{display:block;margin-top:14px;font-size:.8rem;opacity:.6}
 
+  /* ÍNDICES estilo Painel */
+  .escala{
+    display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:44px;
+    font-size:.75rem;opacity:.75;
+  }
+  .escala span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  .e1::before{background:#c0392b}.e2::before{background:#d68a3a}.e3::before{background:#d4b93c}.e4::before{background:#3d7a8c}.e5::before{background:#2e5d48}
+  .indices{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;margin-top:20px;
+  }
+  .indice{
+    background:var(--branco);border:1px solid var(--areia-escura);border-radius:14px;
+    padding:30px 28px;
+  }
+  .ind-head{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+  .ind-emoji{font-size:1.5rem}
+  .ind-num{font-family:'Fraunces',serif;font-size:2.5rem;line-height:1}
+  .ind-badge{
+    font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 12px;border-radius:999px;color:var(--branco);
+  }
+  .bom .ind-num{color:var(--agua)} .bom .ind-badge{background:var(--agua)} .bom .ind-fill{background:var(--agua)}
+  .excelente .ind-num{color:var(--verde)} .excelente .ind-badge{background:var(--verde)} .excelente .ind-fill{background:var(--verde)}
+  .ind-bar{height:8px;border-radius:999px;background:var(--areia-escura);margin:14px 0 18px;overflow:hidden}
+  .ind-fill{height:100%;border-radius:999px}
+  .ind-titulo{
+    font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--verde-escuro);margin-bottom:8px;
+  }
+  .ind-pergunta{font-size:.92rem;opacity:.85;margin-bottom:16px}
+  .ind-subs{display:flex;flex-wrap:wrap;gap:6px}
+  .ind-subs span{
+    font-size:.74rem;background:var(--areia);border:1px solid var(--areia-escura);
+    border-radius:999px;padding:4px 12px;opacity:.9;
+  }
+  .ind-link{display:inline-block;margin-top:16px;font-size:.85rem;font-weight:500}
+
   /* PROGRAMA */
   .prog{margin-top:48px;max-width:760px}
   .prog-item{
@@ -463,19 +501,61 @@
         <div class="num">25 km²</div>
         <div class="lbl">de bacia hidrográfica, com cerca de 500 moradores entre a vila de Piracanga e Caubi</div>
       </div>
-      <div class="stat">
-        <div class="num">79</div>
-        <div class="lbl">respondentes adultos no Censo Comunitário 2025–2026, co-criado com a comunidade</div>
+    </div>
+    <div class="escala">
+      <span class="e1">0–20% Nada</span>
+      <span class="e2">21–40% Pouco</span>
+      <span class="e3">41–60% Moderado</span>
+      <span class="e4">61–80% Bom</span>
+      <span class="e5">81–100% Excelente</span>
+    </div>
+    <div class="indices">
+      <div class="indice excelente">
+        <div class="ind-head"><span class="ind-emoji">💧</span><span class="ind-num">86%</span><span class="ind-badge">Excelente</span></div>
+        <div class="ind-bar"><div class="ind-fill" style="width:86%"></div></div>
+        <div class="ind-titulo">Índice de Cuidado com a Água</div>
+        <div class="ind-pergunta">O território cuida da água em todo o seu ciclo?</div>
+        <div class="ind-subs"><span>Acesso a Fonte de Água Limpa</span><span>Qualidade da Bacia Hidrográfica</span><span>Gestão de Saneamento</span></div>
+        <a class="ind-link" href="https://leticiacqueiroz-biomas.github.io/painel-inteligencia-territorial-piracanga/" target="_blank" rel="noopener">→ Ver Censo</a>
       </div>
-      <div class="stat">
-        <div class="num">7,9</div>
-        <div class="lbl">qualidade de vida percebida pelos moradores, acima da média nacional</div>
+      <div class="indice excelente">
+        <div class="ind-head"><span class="ind-emoji">♻️</span><span class="ind-num">90%</span><span class="ind-badge">Excelente</span></div>
+        <div class="ind-bar"><div class="ind-fill" style="width:90%"></div></div>
+        <div class="ind-titulo">Índice de Responsabilidade com Resíduos</div>
+        <div class="ind-pergunta">O território reduz, trata e descarta adequadamente seus resíduos?</div>
+        <div class="ind-subs"><span>Adoção de Compostagem</span><span>Adoção de Reciclagem</span></div>
+        <a class="ind-link" href="https://leticiacqueiroz-biomas.github.io/painel-inteligencia-territorial-piracanga/" target="_blank" rel="noopener">→ Ver Censo</a>
       </div>
-      <div class="stat">
-        <div class="num">70+</div>
-        <div class="lbl">indicadores municipais cruzados com o censo no diagnóstico do território (Índice KYT)</div>
+      <div class="indice bom">
+        <div class="ind-head"><span class="ind-emoji">🎍</span><span class="ind-num">70%</span><span class="ind-badge">Bom</span></div>
+        <div class="ind-bar"><div class="ind-fill" style="width:70%"></div></div>
+        <div class="ind-titulo">Índice de Confiança</div>
+        <div class="ind-pergunta">Este território consegue se organizar coletivamente?</div>
+        <div class="ind-subs"><span>Confiança nas Instituições</span><span>Confiança na Vizinhança</span><span>Índice de Colaboração</span><span>Participação Política</span><span>Amor ao Lugar</span></div>
+        <a class="ind-link" href="https://leticiacqueiroz-biomas.github.io/painel-inteligencia-territorial-piracanga/" target="_blank" rel="noopener">→ Ver Censo</a>
+      </div>
+      <div class="indice bom">
+        <div class="ind-head"><span class="ind-emoji">🌿</span><span class="ind-num">70%</span><span class="ind-badge">Bom</span></div>
+        <div class="ind-bar"><div class="ind-fill" style="width:70%"></div></div>
+        <div class="ind-titulo">Índice de Integridade da Paisagem</div>
+        <div class="ind-pergunta">O território está mantendo sua integridade ecológica?</div>
+        <div class="ind-subs"><span>Conversão do Solo</span><span>Áreas Protegidas Integradas</span><span>Dados de campo OS</span></div>
+        <a class="ind-link" href="https://leticiacqueiroz-biomas.github.io/painel-inteligencia-territorial-piracanga/" target="_blank" rel="noopener">→ Ver Mapas</a>
+      </div>
+      <div class="indice bom">
+        <div class="ind-head"><span class="ind-emoji">🧠</span><span class="ind-num">69%</span><span class="ind-badge">Bom</span></div>
+        <div class="ind-bar"><div class="ind-fill" style="width:69%"></div></div>
+        <div class="ind-titulo">Índice de Bem-Estar</div>
+        <div class="ind-pergunta">As pessoas vivem bem neste território?</div>
+        <div class="ind-subs"><span>Moradia Acessível e Segura</span><span>Acesso à Internet</span><span>Bem-estar Físico e Emocional</span><span>Acesso a Serviços de Saúde</span><span>Renda Suficiente</span></div>
+        <a class="ind-link" href="https://leticiacqueiroz-biomas.github.io/painel-inteligencia-territorial-piracanga/" target="_blank" rel="noopener">→ Ver Censo</a>
       </div>
     </div>
+    <a href="https://leticiacqueiroz-biomas.github.io/painel-inteligencia-territorial-piracanga/" target="_blank" rel="noopener"
+       style="display:block;margin-top:52px;border-radius:18px;overflow:hidden;border:1px solid #ddd2bd;box-shadow:0 14px 34px rgba(30,58,47,.10);line-height:0">
+      <img src="img/painel.png" alt="Painel de Inteligência Territorial de Piracanga"
+        style="width:100%;display:block" onerror="this.closest('a').remove()">
+    </a>
     <a class="btn" href="https://leticiacqueiroz-biomas.github.io/painel-inteligencia-territorial-piracanga/" target="_blank" rel="noopener">
       Explorar o Painel de Inteligência Territorial →
     </a>
