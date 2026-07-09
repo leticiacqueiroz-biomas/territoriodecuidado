@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Territorios do Cuidar//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/Bahia
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:territorios-do-cuidar-2026@territoriodecuidado.com.br
+DTSTAMP:20260709T120000Z
+DTSTART;TZID=America/Bahia:20260730T080000
+DTEND;TZID=America/Bahia:20260730T160000
+SUMMARY:Territórios do Cuidar
+DESCRIPTION:Um encontro sobre o cuidado: vivido\, praticado e aprendido. Como uma comunidade real cuida de suas águas\, seus resíduos\, suas relações\, sua floresta e de si mesma. Informações: https://xn--territriodecuidado-v1b.com.br/
+LOCATION:Ecovila Piracanga\, Maraú - BA\, Brasil
+URL:https://xn--territriodecuidado-v1b.com.br/
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Territórios do Cuidar é amanhã!
+END:VALARM
+END:VEVENT
+END:VCALENDAR

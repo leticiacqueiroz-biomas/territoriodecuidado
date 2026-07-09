@@ -680,7 +680,7 @@
     </form>
     <script>
       // URL do Apps Script da planilha de inscrições (termina em /exec)
-      var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxTaj8CkyjcJKUWO7JyXHzclpaiNVFz7uX4SwpK3cdEoTXsmAI2P4dkjz_bewkwRF6f/exec";
+      var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzUJZ5QBDl-CF0gvwGh6Vnylwm7DQ1SCrE7W8OEEMlRDqvVCoA3JohZnsoJ2qutNi-m/exec";
 
       document.getElementById('form-inscricao').addEventListener('submit', function (ev) {
         ev.preventDefault();
@@ -694,7 +694,11 @@
             form.querySelectorAll('label, input, button').forEach(function (el) { el.style.display = 'none'; });
             msg.style.display = 'block';
             msg.style.color = 'var(--verde)';
-            msg.innerHTML = '<strong>Inscrição confirmada!</strong> Que alegria receber você. Nos vemos no dia 30 de julho, das 8h às 16h, na Ecovila Piracanga. 🌱';
+            msg.innerHTML = '<strong>Inscrição confirmada!</strong> Que alegria receber você. Nos vemos no dia 30 de julho, das 8h às 16h, na Ecovila Piracanga. 🌱'
+              + '<br><br>Guarde a data na sua agenda:'
+              + '<br><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Territ%C3%B3rios%20do%20Cuidar&dates=20260730T080000/20260730T160000&ctz=America/Bahia&location=Ecovila%20Piracanga%2C%20Mara%C3%BA%20-%20BA&details=Um%20encontro%20sobre%20o%20cuidado%3A%20vivido%2C%20praticado%20e%20aprendido.%20https%3A%2F%2Fxn--territriodecuidado-v1b.com.br%2F" target="_blank" rel="noopener" style="font-weight:500">📅 Adicionar ao Google Agenda</a>'
+              + '<br><a href="territorios-do-cuidar.ics" download style="font-weight:500">🍎 Baixar convite (Apple / Outlook)</a>'
+              + '<br><br>Você também vai receber um e-mail de confirmação.';
           })
           .catch(function () {
             btn.disabled = false;
