@@ -666,20 +666,45 @@
     <div class="kicker">Inscrição</div>
     <h2>Confirme sua presença</h2>
     <p class="lead">O encontro é aberto e gratuito. Preencha para recebermos você com cuidado.</p>
-    <form class="form-box" action="https://formsubmit.co/leticia@biomas.ai" method="POST">
-      <input type="hidden" name="_subject" value="Inscrição · Territórios do Cuidar">
-      <input type="hidden" name="_next" value="https://xn--territriodecuidado-v1b.com.br/?inscrita=1">
-      <input type="text" name="_honey" style="display:none">
+    <form class="form-box" id="form-inscricao">
       <label for="nome">Nome completo</label>
-      <input type="text" id="nome" name="Nome" required placeholder="Seu nome">
+      <input type="text" id="nome" name="nome" required placeholder="Seu nome">
       <label for="org">Organização</label>
-      <input type="text" id="org" name="Organização" placeholder="Instituição, coletivo ou iniciativa (se houver)">
+      <input type="text" id="org" name="organizacao" placeholder="Instituição, coletivo ou iniciativa (se houver)">
       <label for="zap">WhatsApp</label>
-      <input type="tel" id="zap" name="WhatsApp" required placeholder="(73) 9 0000-0000">
+      <input type="tel" id="zap" name="whatsapp" required placeholder="(73) 9 0000-0000">
       <label for="email">E-mail</label>
-      <input type="email" id="email" name="E-mail" required placeholder="voce@email.com">
-      <button type="submit">Quero participar</button>
+      <input type="email" id="email" name="email" required placeholder="voce@email.com">
+      <button type="submit" id="btn-inscricao">Quero participar</button>
+      <p id="msg-inscricao" style="display:none;margin-top:20px;font-size:.95rem"></p>
     </form>
+    <script>
+      // URL do Apps Script da planilha de inscrições (termina em /exec)
+      var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzW-ViLzNZt1zSy-VixjZjHejGxfyJJ-y8HSIDoa-wo97RxY-nISjjutkLV9aih_X-0GA/exec";
+
+      document.getElementById('form-inscricao').addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var form = ev.target;
+        var btn = document.getElementById('btn-inscricao');
+        var msg = document.getElementById('msg-inscricao');
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+        fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
+          .then(function () {
+            form.querySelectorAll('label, input, button').forEach(function (el) { el.style.display = 'none'; });
+            msg.style.display = 'block';
+            msg.style.color = 'var(--verde)';
+            msg.innerHTML = '<strong>Inscrição confirmada!</strong> Que alegria receber você. Nos vemos no dia 30 de julho, das 8h às 16h, na Ecovila Piracanga. 🌱';
+          })
+          .catch(function () {
+            btn.disabled = false;
+            btn.textContent = 'Quero participar';
+            msg.style.display = 'block';
+            msg.style.color = '#c0392b';
+            msg.innerHTML = 'Não foi possível enviar agora. Tente de novo ou escreva para <a href="mailto:leticia@biomas.ai">leticia@biomas.ai</a>.';
+          });
+      });
+    </script>
   </div>
 </section>
 
