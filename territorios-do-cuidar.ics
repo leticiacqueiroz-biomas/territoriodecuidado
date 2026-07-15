@@ -18,9 +18,9 @@ DTSTAMP:20260709T120000Z
 DTSTART;TZID=America/Bahia:20260730T080000
 DTEND;TZID=America/Bahia:20260730T160000
 SUMMARY:Territórios do Cuidar
-DESCRIPTION:Um encontro sobre o cuidado: vivido\, praticado e aprendido. Como uma comunidade real cuida de suas águas\, seus resíduos\, suas relações\, sua floresta e de si mesma. Informações: https://xn--territriodecuidado-v1b.com.br/
+DESCRIPTION:Um encontro sobre o cuidado: vivido\, praticado e aprendido. Como uma comunidade real cuida de suas águas\, seus resíduos\, suas relações\, sua floresta e de si mesma. Informações: https://territoriosdocuidar.com.br/
 LOCATION:Ecovila Piracanga\, Maraú - BA\, Brasil
-URL:https://xn--territriodecuidado-v1b.com.br/
+URL:https://territoriosdocuidar.com.br/
 STATUS:CONFIRMED
 BEGIN:VALARM
 TRIGGER:-P1D
