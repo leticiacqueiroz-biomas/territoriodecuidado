@@ -174,11 +174,11 @@
   /* CRACHAS + PAINEIS */
   .crachas{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:34px}
   .crachas figure{margin:0;border-radius:14px;overflow:hidden;background:var(--branco);border:1px solid var(--areia-escura);line-height:0}
-  .crachas img{width:100%;height:250px;object-fit:cover;display:block;transition:transform .35s}
+  .crachas img{width:100%;height:280px;object-fit:contain;object-position:center;display:block;background:var(--areia);padding:6px;transition:transform .35s}
   .crachas figure:hover img{transform:scale(1.04)}
   .paineis{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:34px}
   .paineis figure{margin:0;border-radius:14px;overflow:hidden;background:var(--branco);border:1px solid var(--areia-escura)}
-  .paineis img{width:100%;height:280px;object-fit:cover;display:block;transition:transform .35s}
+  .paineis img{width:100%;height:330px;object-fit:contain;object-position:center;display:block;background:var(--areia);padding:8px;transition:transform .35s}
   .paineis figure:hover img{transform:scale(1.03)}
   .paineis figcaption{font-size:.82rem;padding:10px 14px;color:var(--verde-escuro);font-weight:500;background:var(--branco)}
   .depo{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:38px}
