@@ -171,6 +171,27 @@
   }
   .num-faixa strong{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:400;color:var(--verde-claro)}
 
+  /* CRACHAS + PAINEIS */
+  .crachas{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:34px}
+  .crachas figure{margin:0;border-radius:14px;overflow:hidden;background:var(--branco);border:1px solid var(--areia-escura);line-height:0}
+  .crachas img{width:100%;height:250px;object-fit:cover;display:block;transition:transform .35s}
+  .crachas figure:hover img{transform:scale(1.04)}
+  .paineis{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:34px}
+  .paineis figure{margin:0;border-radius:14px;overflow:hidden;background:var(--branco);border:1px solid var(--areia-escura)}
+  .paineis img{width:100%;height:280px;object-fit:cover;display:block;transition:transform .35s}
+  .paineis figure:hover img{transform:scale(1.03)}
+  .paineis figcaption{font-size:.82rem;padding:10px 14px;color:var(--verde-escuro);font-weight:500;background:var(--branco)}
+  .depo{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:38px}
+  .depo blockquote{
+    margin:0;background:var(--branco);border:1px solid var(--areia-escura);border-radius:14px;
+    padding:28px 30px;font-family:'Fraunces',serif;font-style:italic;font-size:1.03rem;
+    color:var(--verde);line-height:1.55;
+  }
+  .depo blockquote cite{
+    display:block;margin-top:16px;font-family:'Inter',sans-serif;font-style:normal;
+    font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta);opacity:.55;
+  }
+
   /* MAPA */
   #mapa-rede{height:460px;border-radius:16px;margin-top:34px;border:1px solid var(--areia-escura);z-index:1}
   .leaflet-popup-content{font-family:'Inter',sans-serif;font-size:.9rem}
@@ -372,6 +393,7 @@
       <a href="#praticas">O cuidado na prática</a>
       <a href="#universidade">A visão</a>
       <a href="#dados">Dados do território</a>
+      <a href="#vozes">Vozes</a>
       <a href="#rede">Fazer parte</a>
     </div>
   </div>
@@ -603,6 +625,18 @@
       <div class="card"><h3>🌾 Economia e turismo</h3><p>Da prática exploratória e de massa ao turismo comunitário, sustentável e regenerativo — conectado ao bem-estar, à natureza e à cultura local.</p></div>
       <div class="card"><h3>🌱 Agroecologia, agricultura e solo</h3><p>Agricultura familiar, agrofloresta, permacultura, compostagem, saneamento ecológico e recuperação do solo, integrando água, terra, floresta e comunidade.</p></div>
     </div>
+    <h3 style="margin-top:52px;font-size:1.4rem;color:var(--verde-escuro)">Os painéis que saíram das rodas</h3>
+    <p style="max-width:62ch;margin-top:8px">Tudo o que está escrito acima nasceu destes papéis. Eles foram construídos à mão, ao vivo, por quem estava na roda.</p>
+    <div class="paineis">
+      <figure><img src="img/site/painel-aguas.jpg" alt="Painel da roda de Águas" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>💧 Águas</figcaption></figure>
+      <figure><img src="img/site/painel-residuos.jpg" alt="Painel da roda de Resíduos" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>♻️ Resíduos</figcaption></figure>
+      <figure><img src="img/site/painel-expansao.jpg" alt="Painel da roda de Expansão urbana" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>🏘️ Expansão urbana, segurança e cultura</figcaption></figure>
+      <figure><img src="img/site/painel-estrada.jpg" alt="Painel da roda de Estradas e transportes" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>🛣️ Estradas e transportes</figcaption></figure>
+      <figure><img src="img/site/painel-relacoes.jpg" alt="Painel da roda de Relações" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>🤝 Relações</figcaption></figure>
+      <figure><img src="img/site/painel-economia.jpg" alt="Painel da roda de Economia e turismo" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>🌾 Economia e turismo</figcaption></figure>
+      <figure><img src="img/site/painel-agro.jpg" alt="Painel da roda de Agroecologia, agricultura e solo" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>🌱 Agroecologia, agricultura e solo</figcaption></figure>
+    </div>
+
     <div style="margin-top:44px;background:var(--branco);border:1px solid var(--areia-escura);border-radius:14px;padding:30px 34px">
       <h3 style="color:var(--verde-escuro);margin-bottom:14px">O que atravessou os sete temas</h3>
       <p style="margin-bottom:10px"><strong>Educação e sensibilização</strong> como condição para mudanças duradouras.</p>
@@ -610,6 +644,30 @@
       <p style="margin-bottom:10px"><strong>Participação comunitária</strong> como requisito para decisões legítimas sobre o território.</p>
       <p style="margin:0"><strong>Cuidado e regeneração</strong> em todos os temas: os desafios não podem ser tratados separadamente.</p>
     </div>
+  </div>
+</section>
+
+<section id="vozes">
+  <div class="wrap">
+    <div class="kicker">Escuta pós-encontro</div>
+    <h2>O encontro na voz de quem esteve lá</h2>
+    <p class="lead">As mensagens que chegaram depois do dia 30 revelam o encontro como espaço de pertencimento, inspiração e abertura para uma agenda comum.</p>
+    <div class="depo">
+      <blockquote>“Ver tanta gente mobilizada, interessada e conectada ampliou muito a minha compreensão da região e de tudo o que pode ser construído a partir do Centro Cultural e mais além. Saio muito inspirada e com a sensação de que estamos apenas começando.”<cite>Juli</cite></blockquote>
+      <blockquote>“Foi muito legal essa união e a forma como conduziram. Obrigado pelo acolhimento e por dividirem os pontos positivos e negativos que vocês vêm vivendo na vila. Essa troca foi bem construtiva para a gente.”<cite>Gabriel · Algodões</cite></blockquote>
+      <blockquote>“Quem chega traz um olhar novo, atento a detalhes que nós, por estarmos aqui há tanto tempo, acabamos deixando passar. Essa troca é muito rica. Espero que este tenha sido apenas o primeiro de muitos encontros.”<cite>Participante</cite></blockquote>
+      <blockquote>“Há mais de dez anos Piracanga produz tantos significados em minha vida. Que alegria colaborar, aprender com amigos que admiro e me sentir parte desta história.”<cite>Participante</cite></blockquote>
+    </div>
+
+    <h3 style="margin-top:60px;font-size:1.4rem;color:var(--verde-escuro)">Seis palavras no peito</h3>
+    <p style="max-width:64ch;margin-top:8px">Cada pessoa chegou com um crachá feito à mão, trazendo o nome, a iniciativa e a resposta a uma pergunta: <em>qual cuidado o seu território pratica bem?</em> A contribuição antes da instituição.</p>
+    <div class="crachas">
+      <figure><img src="img/site/cracha-rodrigo-leticia.jpg" alt="Crachás: Rodrigo, Ohana — cuidado com as águas e as relações; Letícia, Biomas e Somos Água — cuido das relações" loading="lazy" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="img/site/cracha-juli.jpg" alt="Crachá da Juli, Taboa e ITC: coexistir em harmonia com a natureza e seus seres" loading="lazy" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="img/site/cracha-wilsa.jpg" alt="Crachá da Wilsa: cuidar de quem nos faz viver, a terra" loading="lazy" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="img/site/cracha-sol.jpg" alt="Crachá do Sol, Instituto Nossa Ilhéus: esperança de um ser, união" loading="lazy" onerror="this.closest('figure').remove()"></figure>
+    </div>
+    <p style="margin-top:20px;font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;color:var(--verde)">“Cuidar de quem nos faz viver.” · “Coexistir em harmonia com a natureza e seus seres.” · “Esperança de um ser: união.”</p>
   </div>
 </section>
 
